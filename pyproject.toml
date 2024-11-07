@@ -1,0 +1,52 @@
+[project]
+name='pyproject-streamlit'
+version='0.0.1'
+authors = [
+    {name = 'forgineer', email = 'blake.phillips86@gmail.com'},
+]
+description='A helpful tool for building your pyproject.toml files.'
+readme = 'README.md' # Long description
+license = {text = 'MIT License'}
+requires-python = ">=3.11"
+dependencies = [
+    'streamlit'
+]
+keywords = [
+    'python projects',
+    'packaging',
+    'pyproject.toml',
+    'web app'
+]
+classifiers = [
+    'Development Status :: 1 - Planning',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python :: 3',
+]
+
+
+[project.urls]
+Homepage = 'https://pyproject.streamlit.app/'
+Repository = 'https://github.com/forgineer/pyproject-streamlit'
+Issues = 'https://github.com/forgineer/pyproject-streamlit/issues'
+
+
+[project.optional-dependencies]
+# pip install -e .[pypi_deploy]
+pypi_deploy = [
+    'build',
+    'twine'
+]
+# Steps for building and deploying to pypi:
+# - python -m build
+# - twine check dist/*
+# - twine upload -r testpypi dist/*
+# - twine upload dist/*
+
+
+[build-system]
+requires = [
+    'setuptools >= 61.0'
+]
+build-backend = 'setuptools.build_meta'
